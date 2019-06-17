@@ -23,13 +23,13 @@ jQuery(document).ready(function () {
 	var pauseButton = document.getElementById('pause');
 
 	function pauseSlideshow() {
-		pauseButton.innerHTML = '&#9658;'; // play character
+		// pauseButton.innerHTML = '&#9658;'; // play character
 		playing = false;
 		clearInterval(slideInterval);
 	}
 
 	function playSlideshow() {
-		pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
+		// pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
 		playing = true;
 		slideInterval = setInterval(nextSlide, 2000);
 	}
@@ -71,16 +71,16 @@ jQuery(document).ready(function () {
 				'opacity': 0
 			}, {
 				queue: false,
-				duration: 1000,
+				duration: 800,
 				complete: function () {
 					jQuery('section.content.show').hide();
 					jQuery('a[href="#' + link + '"]').addClass('active'); // add active
 					jQuery('section#' + link).show();
 					if (link == 'contact') {
-						$('#map').fadeIn(1000);
+						$('#map').fadeIn(800);
 						console.log('fadeIn')
 					} else {
-						$('#map').fadeOut(1000);
+						$('#map').fadeOut(800);
 					}
 					jQuery('section#' + link).addClass('show').animate({
 						'opacity': 1

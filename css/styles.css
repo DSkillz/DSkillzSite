@@ -10,7 +10,6 @@ html, body {
 	padding: 0;
 	z-index: 0;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
@@ -21,6 +20,8 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
+	/* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300))); */
 }
 
 /*
@@ -90,7 +91,7 @@ a:hover {
 /* Set Page Elements */
 
 .content {
-	margin: 0 0 0 5vw;
+	margin: 0 0 0 14vw;
 	position: absolute;
 	top: 40vh;
 	z-index: 5;
@@ -98,13 +99,13 @@ a:hover {
 }
 
 #logo {
-	width: 236px;
+	width: 285px;
 	font-family: 'Coustard', serif;
-	font-size: 3rem;
+	font-size: 3.7rem;
 	z-index: 5;
 	color: #fff;
 	word-break: break-word;
-	line-height: 60px;
+	line-height: 65px;
 }
 
 .main-nav {
@@ -128,11 +129,22 @@ a:hover {
 	display: inline-flex;
 	flex-direction: row;
 	width: max-content;
-	padding: 0 50px 0 0;
+	padding: 0 50px 13px 0;
+}
+
+nav.main-nav ul li:nth-child(4) {
+    padding-left: 0;
 }
 
 .main-nav ul li a.active {
 	color: #ffa800;
+}
+
+#about {
+	color: #2aff00;
+	top: 34vh;
+	font-weight: bold;
+	padding-right: 30px;
 }
 
 .social-nav {
@@ -170,7 +182,7 @@ button.full-screen-btn:hover {
 	width: 90vw;
 	display: flex;
 	position: relative;
-	padding: 0 5vw 2vw 5vw;
+	padding: 0 5vw 15px 5vw;
 	justify-content: space-between;
 }
 
@@ -188,7 +200,7 @@ iframe {
 	display: block;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
 	.content {
 		top: 30vh !important;
 	}
@@ -196,11 +208,22 @@ iframe {
 	.main-nav ul {
 		padding: 0;
 	}
+
+	#logo {
+		position: fixed;
+		font-size: 2.3rem;
+		line-height: 45px;
+		bottom: 143px;
+	}
+
+	.main-nav {
+		align-items: flex-end;
+	}
 }
 
 @media (max-width: 599px) {
 	iframe {
-		position: absolute;
+		position: fixed;
 		width: 68vw;
 		height: 62vh;
 		top: 20vh;
@@ -210,7 +233,7 @@ iframe {
 
 @media (min-width: 600px) {
 	iframe {
-		position: absolute;
+		position: fixed;
 		width: 68vw;
 		height: 37vh;
 		top: 53vh;
@@ -220,7 +243,7 @@ iframe {
 
 @media (min-width: 900px) {
 	iframe {
-		position: absolute;
+		position: fixed;
 		width: 68vw;
 		height: 38vh;
 		top: 51vh;
@@ -230,17 +253,17 @@ iframe {
 
 @media (min-width: 1200px) {
 	iframe {
-		position: absolute;
-		width: 64vw;
+		position: fixed;
+		width: 60vw;
 		height: 62vh;
 		top: 20vh;
-		right: 5vw;
+		left: 35vw;
 	}
 }
 
 @media (min-width: 1800px) {
 	iframe {
-		position: absolute;
+		position: fixed;
 		width: 58vw;
 		height: 73vh;
 		top: 12vh;
@@ -256,12 +279,6 @@ iframe {
 	}
 }
 
-/* Prevent font scaling beyond this breakpoint */
-@media (min-width: 1920px) {
-	:root {
-		font-size: 32px veryimportant;
-	}
-}
 
 /**********************************************/
 /**********************************************/
@@ -341,10 +358,10 @@ just for appearance; change whatever you want
 .buttons {
 	position: relative;
 	left: 0px;
-	bottom: -70px;
+	bottom: -78px;
 	z-index: 5;
 	font-size: 0px;
-	width: 111px;
+	width: 115px;
 	height: 39px;
 }
 
@@ -362,5 +379,5 @@ button {
 	width: 0px;
 	height: 0px;
 	margin: 0px;
-	visibility: hidden;
+	display: none;
 }
