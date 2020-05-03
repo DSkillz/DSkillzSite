@@ -20,6 +20,7 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	/* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300))); */
 }
@@ -110,8 +111,11 @@ a:hover {
 
 .main-nav {
 	z-index: 5;
+	position: absolute;
+	bottom: 28px;
 	display: flex;
 	width: 100%;
+	height: fit-content;
 	align-items: flex-end;
 }
 
@@ -129,7 +133,7 @@ a:hover {
 	display: inline-flex;
 	flex-direction: row;
 	width: max-content;
-	padding: 0 50px 13px 0;
+	padding: 0;
 }
 
 nav.main-nav ul li:nth-child(4) {
@@ -142,7 +146,7 @@ nav.main-nav ul li:nth-child(4) {
 
 #about {
 	color: #2aff00;
-	top: 34vh;
+	top: 27vh;
 	font-weight: bold;
 	padding-right: 30px;
 }
@@ -327,15 +331,15 @@ just for appearance; change whatever you want
 }
 
 .slide:nth-of-type(1) {
-	background-image: url('https://digital-skillz.fr/img/blue_c4d_wallpaper.jpg');
+	background-image: url('/img/backgrounds/blue_c4d_wallpaper_by_dan4archangel_d1jnex0-fullview.jpg');
 }
 
 .slide:nth-of-type(2) {
-	background-image: url('https://digital-skillz.fr/img/club%20des%20d%C3%A9vs%20clermontois.jpg');
+	background-image: url('/img/backgrounds/Code-Vortex-4.jpg');
 }
 
 .slide:nth-of-type(3) {
-	background-image: url('https://digital-skillz.fr/img/technology-591103f20ff18.jpg');
+	background-image: url('/img/backgrounds/436130.jpg');
 }
 
 .controls {
