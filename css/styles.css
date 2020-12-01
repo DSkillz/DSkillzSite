@@ -111,12 +111,13 @@ a:hover {
 
 .main-nav {
 	z-index: 5;
-	position: absolute;
-	bottom: 28px;
+	position: relative;
+	bottom: 13px;
 	display: flex;
-	width: 100%;
+	/*! width: 100%; */
 	height: fit-content;
 	align-items: flex-end;
+	display: flex;
 }
 
 .main-nav ul li {
