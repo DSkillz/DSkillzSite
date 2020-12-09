@@ -137,15 +137,11 @@ a:hover {
 	padding: 0;
 }
 
-nav.main-nav ul li:nth-child(4) {
-    padding-left: 0;
-}
-
 .main-nav ul li a.active {
 	color: #ffa800;
 }
 
-#about {
+#about, #services, #tarifs, #valeurs {
 	color: #2aff00;
 	top: 27vh;
 	font-weight: bold;
