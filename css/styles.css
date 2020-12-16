@@ -2,7 +2,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Coustard|Open+Sans);
 
-html, body {
+html,
+body {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
@@ -91,6 +92,13 @@ a:hover {
 
 /* Set Page Elements */
 
+#lightbox-overlay {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	z-index: 10;
+}
+
 .content {
 	margin: 0 0 0 14vw;
 	position: absolute;
@@ -100,7 +108,6 @@ a:hover {
 }
 
 #logo {
-	width: 285px;
 	font-family: 'Coustard', serif;
 	font-size: 3.7rem;
 	z-index: 5;
@@ -141,11 +148,20 @@ a:hover {
 	color: #ffa800;
 }
 
-#about, #services, #tarifs, #valeurs {
+#about,
+#services,
+#tarifs,
+#valeurs {
 	color: #2aff00;
 	top: 27vh;
 	font-weight: bold;
 	padding-right: 30px;
+}
+
+#valeurs,
+#services,
+#tarifs {
+	padding-top: 8vh;
 }
 
 .social-nav {
@@ -245,9 +261,9 @@ iframe {
 @media (min-width: 900px) {
 	iframe {
 		position: fixed;
-		width: 68vw;
-		height: 38vh;
-		top: 51vh;
+		width: 54vw;
+		height: 48vh;
+		top: 29vh;
 		right: 5vw;
 	}
 }

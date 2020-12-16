@@ -1,5 +1,20 @@
 jQuery(document).ready(function () {
 
+	// Make the overlay the size of the body
+	var $body = $(this.ie6 ? document.body : document); // using document in ie6 causes a crash
+
+	$("body").resize(function(e){
+		$("#lightbox-overlay").append("width = " + $body.width() + "<br>" + "height = " + $body.height())
+	});
+
+
+	// Get the window dimensions
+	var $window = $(window);
+	var wWidth = $window.width();
+	var wHeight = $window.height();
+
+	
+	// slides
 	var slides = document.querySelectorAll('#slides .slide');
 	var currentSlide = 0;
 	var slideInterval = setInterval(nextSlide, 5000);
